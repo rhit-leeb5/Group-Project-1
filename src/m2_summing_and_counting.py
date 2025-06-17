@@ -12,13 +12,14 @@ Authors: David Mutchler, Rachel Krohn, Dave Fisher, Shawn Bohner, Sriram Mohan,
          Scott McClellan, Yiji Zhang, Mohammed Noureddine, Steve Chenoweth,
          Claude Anderson, Michael Wollowski, Chandan Rupakheti,
          Derek Whitley, Curt Clifton, Valerie Galluzzi, their colleagues and
-         PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         Bella.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
+import math
 
 """
 Academic Integrity: I got help on this module from:
-         PUT_HERE_THE_NAMES_OF_PEOPLE_WHO_HELPED_YOU_ON_THIS_MODULE_(IF_ANY).
-"""  # TODO: If you got help from anyone on this module, list their names here.
+         Brandon.
+"""  # DONE: If you got help from anyone on this module, list their names here.
 
 # -----------------------------------------------------------------------------
 # Students: As you work each of these problems, ask yourself:
@@ -32,7 +33,7 @@ Academic Integrity: I got help on this module from:
 # -----------------------------------------------------------------------------
 
 ##############################################################################
-# TODO: 2. Read the following, then change its _TODO_ to DONE.
+# DONE: 2. Read the following, then change its _TODO_ to DONE.
 #   Throughout these exercises, you must use  RANGE  statements.
 #   At this point of the course, you are restricted to the SINGLE-ARGUMENT
 #   form of RANGE statements, like this:
@@ -50,7 +51,7 @@ def main():
     print("as you implement the functions that they test.")
     print("-----------------------------------------------")
 
-    # run_test_sum_more_cosines()
+    run_test_sum_more_cosines()
     # run_test_count_sines_from()
     # run_test_count_sines_vs_cosines()
 
@@ -93,10 +94,26 @@ def run_test_sum_more_cosines():
         print("       actual:  ", answer)
 
     # -------------------------------------------------------------------------
-    # TODO: 3 (continued).
+    # DONE: 3 (continued).
     #   Below this comment, add 2 more test cases of your own choosing.
     # -------------------------------------------------------------------------
+    # Test 2:
+    expected = math.cos(1) + math.cos(2)  # This is APPROXIMATELY the correct answer.
+    answer = sum_more_cosines(1, 2)
+    print("Test 2 expected:", expected, "(approximately)")
+    if answer is not None:
+        print("       actual:  ", round(answer, 5))
+    else:
+        print("       actual:  ", answer)
 
+    # Test 3:
+    expected = math.cos(2) + math.cos(3) + math.cos(4)  # This is APPROXIMATELY the correct answer.
+    answer = sum_more_cosines(2, 4)
+    print("Test 3 expected:", expected, "(approximately)")
+    if answer is not None:
+        print("       actual:  ", round(answer, 5))
+    else:
+        print("       actual:  ", answer)
 
 def sum_more_cosines(m, n):
     """
@@ -116,8 +133,12 @@ def sum_more_cosines(m, n):
       :type n: int
       :rtype:  float
     """
+    total = 0
+    for k in range(n-m+1):
+        total += math.cos(m + k)
+    return total
     # -------------------------------------------------------------------------
-    # TODO: 4. Implement and test this function.
+    # DONE: 4. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     #   That is called TEST-FIRST DEVELOPMENT (TFD).
     #  _
@@ -128,7 +149,6 @@ def sum_more_cosines(m, n):
     #    Just   range(blah)   where blah is a single variable.
     #    Reason: To ensure that you get more practice using expressions.
     # -------------------------------------------------------------------------
-
 
 def run_test_count_sines_from():
     """Tests the   count_sines_from   function."""
