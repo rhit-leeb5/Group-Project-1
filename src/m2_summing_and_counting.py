@@ -54,7 +54,7 @@ def main():
 
     run_test_sum_more_cosines()
     run_test_count_sines_from()
-    run_test_count_sines_vs_cosines()
+    # run_test_count_sines_vs_cosines()
 
 
 def run_test_sum_more_cosines():
@@ -156,7 +156,7 @@ def sum_more_cosines(m, n):
 def run_test_count_sines_from():
     """Tests the   count_sines_from   function."""
     # -------------------------------------------------------------------------
-    # DONE: 5. Implement this TEST function.
+    # TODO: 5. Implement this TEST function.
     #   It TESTS the  count_sines_from  function defined below.
     #   Include at least **   6   ** tests (we wrote one for you).
     #              ** Yes, 6 (six) tests. **
@@ -173,13 +173,7 @@ def run_test_count_sines_from():
     answer = count_sines_from(3, 9)
     print("Test 1 expected:", expected)
     print("       actual:  ", answer)
-
-
-    # -------------------------------------------------------------------------
-    # DONE: 5 (continued).
-    #   Below this comment, add 5 more test cases of your own choosing.
-    # -------------------------------------------------------------------------
- # Test 2:
+    # Test 2:
     expected = 2
     answer = count_sines_from(3, 4)
     print("Test 2 expected:", expected)
@@ -204,6 +198,12 @@ def run_test_count_sines_from():
     answer = count_sines_from(3, 8)
     print("Test 6 expected:", expected)
     print("       actual:  ", answer)
+
+    # -------------------------------------------------------------------------
+    # TODO: 5 (continued).
+    #   Below this comment, add 5 more test cases of your own choosing.
+    # -------------------------------------------------------------------------
+
 
 def count_sines_from(m, n):
     """
@@ -237,7 +237,7 @@ def count_sines_from(m, n):
 
     return total
     # -------------------------------------------------------------------------
-    # DONE: 6. Implement and test this function.
+    # TODO: 6. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     #  _
     #  IMPORTANT: As in previous problems in this session,
@@ -268,38 +268,10 @@ def run_test_count_sines_vs_cosines():
     print("       actual:  ", answer)
 
     # -------------------------------------------------------------------------
-    # DONE: 7 (continued).
+    # TODO: 7 (continued).
     #   Below this comment, add 5 more test cases of your own choosing.
     # -------------------------------------------------------------------------
-    # Test 2:
-    expected = 4
-    answer = count_sines_vs_cosines(3)
-    print("Test 2 expected:", expected)
-    print("       actual:  ", answer)
 
-    # Test 2:
-    expected = 0
-    answer = count_sines_vs_cosines(0)
-    print("Test 3 expected:", expected)
-    print("       actual:  ", answer)
-
-    # Test 3:
-    expected = 1
-    answer = count_sines_vs_cosines(1)
-    print("Test 4 expected:", expected)
-    print("       actual:  ", answer)
-
-    # Test 4:
-    expected = 6
-    answer = count_sines_vs_cosines(5)
-    print("Test 5 expected:", expected)
-    print("       actual:  ", answer)
-
-    # Test 5:
-    expected = 2
-    answer = count_sines_vs_cosines(2)
-    print("Test 6 expected:", expected)
-    print("       actual:  ", answer)
 
 def count_sines_vs_cosines(m):
     """
@@ -329,13 +301,6 @@ def count_sines_vs_cosines(m):
       :type m: int
       :rtype:  int
     """
-    count = 0
-    for k in range (m * 2 + 1):
-        value = k-m
-        if math.sin(value) > math.cos(value):
-            count += 1
-    return count
-
     # -------------------------------------------------------------------------
     # TODO: 8. Implement and test this function.
     #   Note that you should write its TEST function first (above).
