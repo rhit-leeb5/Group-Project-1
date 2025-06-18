@@ -14,6 +14,7 @@ Authors: David Mutchler, Rachel Krohn, Dave Fisher, Shawn Bohner, Sriram Mohan,
          Derek Whitley, Curt Clifton, Valerie Galluzzi, their colleagues and
          Bella, Brandon.
 """  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
+
 import math
 
 """
@@ -52,7 +53,7 @@ def main():
     print("-----------------------------------------------")
 
     run_test_sum_more_cosines()
-    # run_test_count_sines_from()
+    run_test_count_sines_from()
     # run_test_count_sines_vs_cosines()
 
 
@@ -115,6 +116,7 @@ def run_test_sum_more_cosines():
     else:
         print("       actual:  ", answer)
 
+
 def sum_more_cosines(m, n):
     """
     What comes in:  Integers m and n, with m <= n.
@@ -134,7 +136,7 @@ def sum_more_cosines(m, n):
       :rtype:  float
     """
     total = 0
-    for k in range(n-m+1):
+    for k in range(n - m + 1):
         total += math.cos(m + k)
     return total
     # -------------------------------------------------------------------------
@@ -149,6 +151,7 @@ def sum_more_cosines(m, n):
     #    Just   range(blah)   where blah is a single variable.
     #    Reason: To ensure that you get more practice using expressions.
     # -------------------------------------------------------------------------
+
 
 def run_test_count_sines_from():
     """Tests the   count_sines_from   function."""
@@ -169,6 +172,31 @@ def run_test_count_sines_from():
     expected = 5
     answer = count_sines_from(3, 9)
     print("Test 1 expected:", expected)
+    print("       actual:  ", answer)
+    # Test 2:
+    expected = 2
+    answer = count_sines_from(3, 4)
+    print("Test 2 expected:", expected)
+    print("       actual:  ", answer)
+    # Test 3:
+    expected = 3
+    answer = count_sines_from(3, 5)
+    print("Test 3 expected:", expected)
+    print("       actual:  ", answer)
+    # Test 4:
+    expected = 4
+    answer = count_sines_from(3, 6)
+    print("Test 4 expected:", expected)
+    print("       actual:  ", answer)
+    # Test 5:
+    expected = 4
+    answer = count_sines_from(3, 7)
+    print("Test 5 expected:", expected)
+    print("       actual:  ", answer)
+    # Test 6:
+    expected = 4
+    answer = count_sines_from(3, 8)
+    print("Test 6 expected:", expected)
     print("       actual:  ", answer)
 
     # -------------------------------------------------------------------------
@@ -200,6 +228,14 @@ def count_sines_from(m, n):
       :type n: int
       :rtype:  int
     """
+    total = 0
+    for i in range(n - m + 1):
+        if math.sin(m + i) < 0.5:
+            total += 1
+        # else:
+        #     total += 0
+
+    return total
     # -------------------------------------------------------------------------
     # TODO: 6. Implement and test this function.
     #   Note that you should write its TEST function first (above).
