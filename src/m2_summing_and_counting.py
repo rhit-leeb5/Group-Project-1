@@ -54,7 +54,7 @@ def main():
 
     run_test_sum_more_cosines()
     run_test_count_sines_from()
-    # run_test_count_sines_vs_cosines()
+    run_test_count_sines_vs_cosines()
 
 
 def run_test_sum_more_cosines():
@@ -266,9 +266,23 @@ def run_test_count_sines_vs_cosines():
     answer = count_sines_vs_cosines(101)
     print("Test 1 expected:", expected)
     print("       actual:  ", answer)
-
+    # Test 2:
+    expected = 4
+    answer = count_sines_vs_cosines(3)
+    print("Test 2 expected:", expected)
+    print("       actual:  ", answer)
+    # Test 3:
+    expected = 0
+    answer = count_sines_vs_cosines(0)
+    print("Test 3 expected:", expected)
+    print("       actual:  ", answer)
+    # Test 4:
+    expected = 1
+    answer = count_sines_vs_cosines(1)
+    print("Test 4 expected:", expected)
+    print("       actual:  ", answer)
     # -------------------------------------------------------------------------
-    # TODO: 7 (continued).
+    # Done: 7 (continued).
     #   Below this comment, add 5 more test cases of your own choosing.
     # -------------------------------------------------------------------------
 
@@ -301,8 +315,14 @@ def count_sines_vs_cosines(m):
       :type m: int
       :rtype:  int
     """
+    count = 0
+    for k in range(2 * m + 1):
+        value = k - m
+        if math.sin(value) > math.cos(value):
+            count = count + 1
+    return count
     # -------------------------------------------------------------------------
-    # TODO: 8. Implement and test this function.
+    # Done: 8. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     #  _
     #  IMPORTANT: As in previous problems in this session,
