@@ -13,13 +13,13 @@ Authors: David Mutchler, Rachel Krohn, Dave Fisher, Shawn Bohner, Sriram Mohan,
          Scott McClellan, Yiji Zhang, Mohammed Noureddine, Steve Chenoweth,
          Claude Anderson, Michael Wollowski, Chandan Rupakheti,
          Derek Whitley, Curt Clifton, Valerie Galluzzi, their colleagues and
-         PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         Bella.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 """
 Academic Integrity: I got help on this module from:
-         PUT_HERE_THE_NAMES_OF_PEOPLE_WHO_HELPED_YOU_ON_THIS_MODULE_(IF_ANY).
-"""  # TODO: If you got help from anyone on this module, list their names here.
+         Brandon.
+"""  # DONE: If you got help from anyone on this module, list their names here.
 
 import rosegraphics as rg
 
@@ -35,7 +35,7 @@ import rosegraphics as rg
 # -----------------------------------------------------------------------------
 
 ##############################################################################
-# TODO: 2. Read the following, then change its _TODO_ to DONE.
+# DONE: 2. Read the following, then change its _TODO_ to DONE.
 #   Throughout these exercises, you must use  RANGE  statements.
 #   At this point of the course, you are restricted to the SINGLE-ARGUMENT
 #   form of RANGE statements, like this:
@@ -53,7 +53,7 @@ def main():
     print("as you implement the functions that they test.")
     print("-----------------------------------------------")
 
-    # run_test_draw_parallel_lines()
+    run_test_draw_parallel_lines()
     # run_test_draw_lines()
 
 
@@ -122,8 +122,25 @@ def draw_parallel_lines(n, point, length, window):
       :type window: rg.RoseWindow
       :rtype: None
     """
+    distance = 30
+    start_x = point.x
+    start_y = point.y
+    end_x  = start_x + length
+    end_y = start_y
+    for _ in range (n):
+
+        line = rg.Line(rg.Point(start_x,start_y), rg.Point(end_x,end_y))
+
+        start_y += distance
+        end_y += distance
+
+        line.attach_to(window)
+
+    window.render()
+    window.close_on_mouse_click()
+
     # -------------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.
+    # DONE: 3. Implement and test this function.
     #          Tests have been written for you (above).
     #  _
     #  CONSIDER using the ACCUMULATOR IN GRAPHICS pattern,
