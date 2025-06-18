@@ -281,6 +281,16 @@ def run_test_count_sines_vs_cosines():
     answer = count_sines_vs_cosines(1)
     print("Test 4 expected:", expected)
     print("       actual:  ", answer)
+    # Test 5:
+    expected = 2
+    answer = count_sines_vs_cosines(2)
+    print("Test 5 expected:", expected)
+    print("       actual:  ", answer)
+    # Test 6:
+    expected = 5
+    answer = count_sines_vs_cosines(4)
+    print("Test 6 expected:", expected)
+    print("       actual:  ", answer)
     # -------------------------------------------------------------------------
     # Done: 7 (continued).
     #   Below this comment, add 5 more test cases of your own choosing.
