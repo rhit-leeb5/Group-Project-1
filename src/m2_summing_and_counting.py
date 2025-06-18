@@ -12,7 +12,7 @@ Authors: David Mutchler, Rachel Krohn, Dave Fisher, Shawn Bohner, Sriram Mohan,
          Scott McClellan, Yiji Zhang, Mohammed Noureddine, Steve Chenoweth,
          Claude Anderson, Michael Wollowski, Chandan Rupakheti,
          Derek Whitley, Curt Clifton, Valerie Galluzzi, their colleagues and
-         Bella.
+         Bella, Brandon.
 """  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 import math
 
@@ -59,7 +59,7 @@ def main():
 def run_test_sum_more_cosines():
     """Tests the   sum_more_cosines   function."""
     # -------------------------------------------------------------------------
-    # TODO: 3. Implement this TEST function.
+    # DONE: 3. Implement this TEST function.
     #   It TESTS the  sum_more_cosines  function defined below.
     #   Include at least **   3   ** tests (we wrote one for you).
     #   _
@@ -98,7 +98,7 @@ def run_test_sum_more_cosines():
     #   Below this comment, add 2 more test cases of your own choosing.
     # -------------------------------------------------------------------------
     # Test 2:
-    expected = math.cos(1) + math.cos(2)  # This is APPROXIMATELY the correct answer.
+    expected = math.cos(1) + math.cos(2)
     answer = sum_more_cosines(1, 2)
     print("Test 2 expected:", expected, "(approximately)")
     if answer is not None:
@@ -107,7 +107,7 @@ def run_test_sum_more_cosines():
         print("       actual:  ", answer)
 
     # Test 3:
-    expected = math.cos(2) + math.cos(3) + math.cos(4)  # This is APPROXIMATELY the correct answer.
+    expected = math.cos(2) + math.cos(3) + math.cos(4)
     answer = sum_more_cosines(2, 4)
     print("Test 3 expected:", expected, "(approximately)")
     if answer is not None:
