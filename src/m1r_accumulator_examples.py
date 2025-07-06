@@ -9,16 +9,16 @@ Authors: David Mutchler, Rachel Krohn, Dave Fisher, Shawn Bohner, Sriram Mohan,
          Scott McClellan, Yiji Zhang, Mohammed Noureddine, Steve Chenoweth,
          Claude Anderson, Michael Wollowski, Chandan Rupakheti,
          Derek Whitley, Curt Clifton, Valerie Galluzzi, their colleagues and
-         PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         Brandon.
+"""  # Done: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 """
 Academic Integrity: I got help on this module from:
          PUT_HERE_THE_NAMES_OF_PEOPLE_WHO_HELPED_YOU_ON_THIS_MODULE_(IF_ANY).
-"""  # TODO: If you got help from anyone on this module, list their names here.
+"""  # Done: If you got help from anyone on this module, list their names here.
 
 ###############################################################################
-# TODO: 2. Read the following, then change its _TODO_ to DONE.
+# Done: 2. Read the following, then change its _TODO_ to DONE.
 #   Throughout these exercises, you must use  RANGE  statements.
 #   At this point of the course, you are restricted to the SINGLE-ARGUMENT
 #   form of RANGE statements, like this:
@@ -29,7 +29,7 @@ Academic Integrity: I got help on this module from:
 ###############################################################################
 
 ###############################################################################
-# TODO: 3.
+# Done: 3.
 #   RUN this program, then READ its code.
 #     Then answer the following, GETTING HELP AS NEED!  (Ask questions!!!)
 #     Write your answers in any reasonable way (your choice).
@@ -46,25 +46,26 @@ Academic Integrity: I got help on this module from:
 #          which of the following three choices would you use?
 #     _
 #            for k in range(r - 1):
-#            for k in range(r):
+#            --> for k in range(r):
 #            for k in range(r + 1):
 #     _
 #     b. If you want a loop that runs from 0 to s, inclusive,
 #          what expression would you use in the _____ below?
 #     _
 #            for k in range(_____):
+#            --> s+1
 #     _
 #     c. If you want a loop that runs from r to s, inclusive, assuming s >= r,
 #          what expression would you use in the _____ below?
 #     _
 #            for k in range(_____):
-#     _
+#     _      --> s-r+1
 #     d. If you want a loop that runs from (r + 4) to (s - 10),
 #          including the (r + 4) but not including the (s - 10),
 #          what expression would you use in the _____ below?
 #     _
 #            for k in range(_____):
-#     _
+#     _     --> (s-10) - (r+4)
 #     e. The following code snippet attempts to return the number
 #          of integers from r to s, inclusive, whose cosines are positive.
 #          It has at least 5 distinct errors (one per line).
@@ -75,10 +76,18 @@ Academic Integrity: I got help on this module from:
 #                  if math.cos(r) > 0:
 #                      count = 1
 #                  return count
+#     _  ---> count = 0
+#               for k in range(s - r + 1):
+#                   number = k + r
+#                   if math.cos(number) > 0:
+#                       count = count + 1
+#               return count
+#     _
 #     _
 #     f. The code in the "graphics accumulation" example below includes:
 #              for _ in range(n):
 #        What does the   _   (underscore) mean?
+#        ---> There is a need for a loop, but the loop variable (ie i or k) is not needed
 #     _
 #     g. The code in the "graphics accumulation" example below includes:
 #     _
@@ -100,7 +109,7 @@ Academic Integrity: I got help on this module from:
 #                  circle = rg.Circle(point, radius)
 #                  circle.attach_to(window)
 #     _
-#              x = starting_point.x
+#              --> (this one is wrong) x = starting_point.x
 #              for k in range(n):
 #                  center = rg.Point(x + (k * diameter), y)
 #                  circle = rg.Circle(point, radius)
