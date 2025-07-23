@@ -219,7 +219,7 @@ def draw_lines(n, point, window):
     # render.attach_to(window)
     window.render()
     # -------------------------------------------------------------------------
-    # TODO: 4. Implement and test this function.
+    # Done: 4. Implement and test this function.
     #          Tests have been written for you (above).
     #  _
     #  CONSIDER using the ACCUMULATOR IN GRAPHICS pattern,

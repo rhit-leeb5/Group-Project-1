@@ -16,13 +16,13 @@ Authors: David Mutchler, Rachel Krohn, Dave Fisher, Shawn Bohner, Sriram Mohan,
          Scott McClellan, Yiji Zhang, Mohammed Noureddine, Steve Chenoweth,
          Claude Anderson, Michael Wollowski, Chandan Rupakheti,
          Derek Whitley, Curt Clifton, Valerie Galluzzi, their colleagues and
-         PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         Brandon Lee.
+"""  # done: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 """
 Academic Integrity: I got help on this module from:
-         PUT_HERE_THE_NAMES_OF_PEOPLE_WHO_HELPED_YOU_ON_THIS_MODULE_(IF_ANY).
-"""  # TODO: If you got help from anyone on this module, list their names here.
+         Bella.
+"""  # Done: If you got help from anyone on this module, list their names here.
 
 import math
 import builtins  # Never necessary, but here for pedagogical reasons
@@ -39,7 +39,7 @@ import builtins  # Never necessary, but here for pedagogical reasons
 # -----------------------------------------------------------------------------
 
 ##############################################################################
-# TODO: 2. Read the following, then change its _TODO_ to DONE.
+# Done: 2. Read the following, then change its _TODO_ to DONE.
 #   Throughout these exercises, you must use  RANGE  statements.
 #   At this point of the course, you are restricted to the SINGLE-ARGUMENT
 #   form of RANGE statements, like this:
