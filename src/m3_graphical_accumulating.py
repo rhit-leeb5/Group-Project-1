@@ -53,7 +53,7 @@ def main():
     print("as you implement the functions that they test.")
     print("-----------------------------------------------")
 
-    # run_test_draw_parallel_lines()
+    run_test_draw_parallel_lines()
     run_test_draw_lines()
 
 
@@ -68,18 +68,18 @@ def run_test_draw_parallel_lines():
     # -------------------------------------------------------------------------
     # TWO tests on ONE window.
     # -------------------------------------------------------------------------
-    # title = "Tests 1 and 2 of DRAW_PARALLEL_LINES:"
-    # title = title + "  4 long lines, 7 short lines"
-    # window1 = rg.RoseWindow(600, 350, title)
-    #
-    # # Test 1:
-    # left_most_point = rg.Point(400, 50)
-    # draw_parallel_lines(7, left_most_point, 100, window1)
-    #
-    # # Test 2:
-    # left_most_point = rg.Point(50, 200)
-    # draw_parallel_lines(4, left_most_point, 300, window1)
-    # window1.close_on_mouse_click()
+    title = "Tests 1 and 2 of DRAW_PARALLEL_LINES:"
+    title = title + "  4 long lines, 7 short lines"
+    window1 = rg.RoseWindow(600, 350, title)
+
+    # Test 1:
+    left_most_point = rg.Point(400, 50)
+    draw_parallel_lines(7, left_most_point, 100, window1)
+
+    # Test 2:
+    left_most_point = rg.Point(50, 200)
+    draw_parallel_lines(4, left_most_point, 300, window1)
+    window1.close_on_mouse_click()
 
     # -------------------------------------------------------------------------
     # A third test on ANOTHER window.
@@ -122,22 +122,22 @@ def draw_parallel_lines(n, point, length, window):
       :type window: rg.RoseWindow
       :rtype: None
     """
-    # distance = 30
-    # start_x = point.x
-    # start_y = point.y
-    # end_x = start_x + length
-    # end_y = start_y
-    # for _ in range(n):
-    #
-    #     line = rg.Line(rg.Point(start_x, start_y), rg.Point(end_x, end_y))
-    #
-    #     start_y += distance
-    #     end_y += distance
-    #
-    #     line.attach_to(window)
-    #
-    # window.render()  # this is not working??
-    # window.close_on_mouse_click()
+    distance = 30
+    start_x = point.x
+    start_y = point.y
+    end_x = start_x + length
+    end_y = start_y
+    for _ in range(n):
+
+        line = rg.Line(rg.Point(start_x, start_y), rg.Point(end_x, end_y))
+
+        start_y += distance
+        end_y += distance
+
+        line.attach_to(window)
+
+    window.render()
+    # window.close_on_mouse_click() #NOTE: With this close window, the next graph will not run!
 
     # -------------------------------------------------------------------------
     # DONE: 3. Implement and test this function.
@@ -204,7 +204,7 @@ def draw_lines(n, point, window):
       :type window: rg.RoseWindow
       :rtype: None
     """
-    distance = 200 / n
+    distance = 200 / (n-1) #NOTE: 3 spaces 4 lines
     start = rg.Point(point.x, point.y)
     end = rg.Point(point.x + 100, point.y - 100)
     for _ in range(n):
